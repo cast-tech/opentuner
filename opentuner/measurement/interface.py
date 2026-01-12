@@ -237,7 +237,7 @@ class MeasurementInterface(with_metaclass(abc.ABCMeta, object)):
            'timeout': False, 'time': 1.89}
         """
         the_io_thread_pool_init(self.args.parallelism)
-        if limit is float('inf'):
+        if limit == float('inf'):
             limit = None
         if type(cmd) in (str, str):
             kwargs['shell'] = True
