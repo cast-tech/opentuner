@@ -51,10 +51,10 @@ the_logging_config = {
     'formatters': {'console': {'format': '[%(relativeCreated)6.0fs] %(levelname)7s %(name)s: %(message)s'},
                    'file': {'format': '[%(asctime)-15s] %(levelname)7s %(name)s: %(message)s @%(filename)s:%(lineno)d'}},
     'handlers': {'console': {'class': 'logging.StreamHandler', 'formatter': 'console', 'level': 'INFO'},
-                 'file': {'class': 'logging.FileHandler', 'filename': 'opentuner.log', 'formatter': 'file', 'level': 'WARNING'}},
-    'loggers': {'': {'handlers': ['console', 'file'], 'level': 'INFO', 'propagate': True}}
+                 'file-warning': {'class': 'logging.FileHandler', 'filename': 'opentuner.log', 'formatter': 'file', 'level': 'WARNING'},
+                 'file-info': {'class': 'logging.FileHandler', 'filename': 'opentuner.log', 'formatter': 'file', 'level': 'INFO'}},
+    'loggers': {'': {'handlers': ['console', 'file-warning', 'file-info'], 'level': 'INFO', 'propagate': True}}
 }
-
 
 def init_logging():
     dictConfig(the_logging_config)
