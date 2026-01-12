@@ -2,3 +2,9 @@ argparse>=1.2.1
 future
 numpy>=1.22
 SQLAlchemy>=1.2.19
+django
+matplotlib
+pytest
+pypandoc
+pandas
+scipy
